@@ -1,78 +1,31 @@
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Link from 'next/link'
+import Head from 'next/head'
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.className} ${geistMono.className} flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black`}
-    >
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the index.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs/pages/getting-started?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <>
+      <Head>
+        <title>Home | Aly Hassan Youssef</title>
+      </Head>
+      <div className="flex flex-col mx-auto mt-16 p-4 md:max-w-1/2 mb-12">
+        <h1 className="text-5xl font-semibold">Aly Hassan Youssef</h1>
+        <h2 className="text-2xl mt-8 font-semibold">Some things about me:</h2>
+
+        <ul className="list-disc mt-4 pl-5 space-y-2">
+          <li>I'm currently a Computer Science student at the American University in Cairo (AUC) <br /> [As of January 2026 I'm in my 2nd semester of junior year]</li>
+          <li>I love going on deep dives on topics that interest me and building hands on projects</li>
+          <li>I enjoy working long hours, mostly in the morning, to build momentum on the various projects I'm working on</li>
+          <li>My most significant project so far is (<a target='blank' rel='noopener noreferrer' className='underline text-blue-600' href={'https://www.teachmegcse.com'}>Teach Me Gcse</a>) where I developed tools to help parse and extract questions and answers from GCSE exam sheets with wich we built tools to help students and teachers</li>
+        </ul>
+
+        <h2 className="text-2xl mt-8 font-semibold">Some of the things I'm interested in:</h2>
+        <ul className="list-disc mt-4 pl-5 space-y-2">
+          <li>Building intuitive and beatiful products that help people solve difficult problems that take a lot of time</li>
+          <li>Understanding how innovation happens and how great products are developed (technological advances just don't just happen on their own)</li>
+          <li>Interior design that makes people more productive on things they care deeply about</li>
+        </ul>
+        <p className='mt-8 font-semibold'>Checkout my <Link className='underline text-blue-600' href={'/reading'}>reading</Link> and <Link className='underline text-blue-600' href={'/deep-dives'}>deep dives</Link></p>
+      </div >
+    </>
   );
 }
