@@ -27,9 +27,7 @@ function BookCard({ book }: { book: BookData }) {
       >
       <div className="flex justify-between items-start gap-4">
         <div>
-          <Link href={`/reading/${(book as any).slug}`} onClick={(e) => e.stopPropagation()} className="no-underline">
             <h3 className="text-2xl font-serif text-neutral-100">{book.title}</h3>
-          </Link>
           <p className="text-sm text-neutral-400 mt-1">by {book.author}</p>
         </div>
         <div className="text-sm text-neutral-400">Rating: {book.rating}/10</div>
@@ -62,6 +60,7 @@ export default function ReadingClient({ books }: { books: BookData[] }) {
     <div className="relative mx-auto mt-12 mb-12 w-full max-w-2xl px-4 sm:px-0">
       <div className="mb-6">
         <label className="block text-sm text-neutral-400 mb-2">Search by title or author</label>
+        <label className="block text-xs text-neutral-500 mb-2">These are the books I found interesting, otherwise checkout my <Link href={'/library'} className="underline text-blue-500">library</Link></label>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
