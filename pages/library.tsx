@@ -122,9 +122,21 @@ export default function Library(): JSX.Element {
     'Deep Work - Cal Newport',
     'Zero to One - Peter Thiel',
     'Some Stephen Hawking books',
-    ''
-
-    // 'Another Book Title',
+    'Atomic Habits - James Clear',
+    'The Wealth of Nations 1-3 - Adam Smith',
+    'The General Theory of Employment, Interest and Money - John Maynard Keynes',
+    'Capitalism and Freedom - Milton Friedman',
+    'The Road to Serfdom - Friedrich Hayek',
+    'Guns, Germs, and Steel - Jared Diamond',
+    'The Selfish Gene - Richard Dawkins',
+    'Poor Charlie\'s Almanack - Charlie Munger',
+    'Endurance - Alfred Lansing',
+    'The Wright Brothers - David McCullough',
+    'Elementary Linear Algebra - Howard Anton',
+    'Mathematical Statistics with Applications - Wackerly, Mendenhall, Scheaffer',
+    'Discrete Mathematics and Its Applications - Kenneth H. Rosen',
+    'The Feynman Lectures on Physics (Volume 1) - Richard P. Feynman',
+    'Computer Organization and Design - David A. Patterson and John L. Hennessy',
   ]
 
   const filtered = useMemo(() => {
