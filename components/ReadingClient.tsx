@@ -25,13 +25,16 @@ function BookCard({ book }: { book: BookData }) {
         className={`cursor-pointer p-6 rounded-lg shadow-lg bg-neutral-800/50 border border-neutral-800 hover:shadow-xl transition-shadow`}
         style={{ minHeight: 160 }}
       >
-      <div className="flex justify-between items-start gap-4">
-        <div>
-            <h3 className="text-2xl font-serif text-neutral-100">{book.title}</h3>
-          <p className="text-sm text-neutral-400 mt-1">by {book.author}</p>
+        <div className="flex justify-between items-start gap-4">
+          <div>
+              <h3 className="text-2xl font-serif text-neutral-100">{book.title}</h3>
+            <p className="text-sm text-neutral-400 mt-1">by {book.author}</p>
+          </div>
+          <div className="text-sm text-neutral-400 text-right">
+            Rating: {book.rating}/10
+            <br />Read: {book.dateRead ? new Date(book.dateRead).toLocaleDateString('en-US', { month: 'long', year: 'numeric' }) : '—'}
+          </div>
         </div>
-        <div className="text-sm text-neutral-400">Rating: {book.rating}/10</div>
-      </div>
 
         <div className="mt-4 text-neutral-300">
           <h4 className="text-xs font-semibold text-neutral-500 uppercase tracking-wide">Summary</h4>

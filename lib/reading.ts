@@ -8,6 +8,7 @@ export type BookData = {
   summary: string[]
   notes: string[]
   rating: number
+  dateRead: string | null
 }
 export type BookWithSlug = BookData & { slug: string }
 
@@ -72,6 +73,7 @@ export function getAllBooks(): BookWithSlug[] {
       summary: parsedSummary || [],
       notes: parsedNotes || [],
       rating: data.rating || 0,
+      dateRead: data.dateRead || null,
     }
   })
 }
@@ -130,6 +132,7 @@ export function getBookBySlug(slug: string): BookWithSlug | null {
       summary: parsedSummary || [],
       notes: parsedNotes || [],
       rating: data.rating || 0,
+      dateRead: data.dateRead || null,
     }
   }
   return null
