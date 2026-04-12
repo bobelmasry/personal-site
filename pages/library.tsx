@@ -4,9 +4,7 @@ import React, { JSX, useMemo, useState } from 'react'
 export default function Library(): JSX.Element {
   const [query, setQuery] = useState('')
 
-  // Add your books to this array (one string per title).
-  // Edit this list manually to add/remove books.
-  const books = [
+  const books = useMemo(() => [
     'Percy Jackson and the Olympians: The Lightning Thief',
     'Percy Jackson and the Olympians: The Sea of Monsters',
     'Percy Jackson and the Olympians: The Titan\'s Curse',
@@ -137,7 +135,7 @@ export default function Library(): JSX.Element {
     'Discrete Mathematics and Its Applications - Kenneth H. Rosen',
     'The Feynman Lectures on Physics (Volume 1) - Richard P. Feynman',
     'Computer Organization and Design - David A. Patterson and John L. Hennessy',
-  ]
+  ], [])
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
@@ -150,11 +148,11 @@ export default function Library(): JSX.Element {
       <Head>
         <title>Library</title>
       </Head>
-      <main style={{ padding: '2rem' }}>
-        <h1 className="text-3xl font-semibold">My Library</h1>
+      <main className="mx-auto mt-16 p-4 max-w-4xl">
+        <h1 className="text-4xl font-serif text-neutral-100 mb-8">My Library</h1>
 
-        <div style={{ marginTop: '1rem' }}>
-          <label htmlFor="book-search" style={{ display: 'block', marginBottom: 6 }}>
+        <div className="mb-6">
+          <label htmlFor="book-search" className="block text-sm text-neutral-300 mb-2">
             Search
           </label>
           <input
@@ -163,14 +161,14 @@ export default function Library(): JSX.Element {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search books..."
-            style={{ padding: '0.5rem', width: '100%', maxWidth: 480, border: '1px solid #ccc', borderRadius: 4 }}
+            className="w-full px-4 py-3 rounded-md bg-neutral-800/40 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-600 text-neutral-100"
             aria-label="Search books"
           />
         </div>
 
-        <ul className="mt-6">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {filtered.map((title) => (
-            <li key={title}>{title}</li>
+            <li key={title} className="p-4 bg-neutral-800/50 border border-neutral-700 rounded-md text-neutral-300 hover:bg-neutral-700/50 transition-colors">{title}</li>
           ))}
         </ul>
       </main>

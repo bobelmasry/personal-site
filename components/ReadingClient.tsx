@@ -22,7 +22,7 @@ function BookCard({ book }: { book: BookData }) {
   return (
     <Link href={`/reading/${(book as any).slug}`} className="no-underline">
       <div
-        className={`cursor-pointer p-6 rounded-lg shadow-lg bg-neutral-900/50 border border-neutral-800 hover:shadow-xl transition-shadow`}
+        className={`cursor-pointer p-6 rounded-lg shadow-lg bg-neutral-800/50 border border-neutral-800 hover:shadow-xl transition-shadow`}
         style={{ minHeight: 160 }}
       >
       <div className="flex justify-between items-start gap-4">
@@ -59,13 +59,13 @@ export default function ReadingClient({ books }: { books: BookData[] }) {
   return (
     <div className="relative mx-auto mt-12 mb-12 w-full max-w-2xl px-4 sm:px-0">
       <div className="mb-6">
-        <label className="block text-sm text-neutral-400 mb-2">Search by title or author</label>
-        <label className="block text-xs text-neutral-500 mb-2">These are the books I found interesting, otherwise checkout my <Link href={'/library'} className="underline text-blue-500">library</Link></label>
+          <label className="block text-sm text-neutral-300 mb-2">Search by title or author</label>
+          <label className="block text-xs text-neutral-400 mb-2">These are the books I found interesting, otherwise checkout my <Link href={'/library'} className="underline text-blue-500">library</Link></label>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search books..."
-          className="w-full px-4 py-3 rounded-md bg-neutral-900/40 border border-neutral-800 focus:outline-none focus:ring-2 focus:ring-neutral-600 text-neutral-100"
+            className="w-full px-4 py-3 rounded-md bg-neutral-800/40 border border-neutral-700 focus:outline-none focus:ring-2 focus:ring-neutral-600 text-neutral-100"
         />
       </div>
 

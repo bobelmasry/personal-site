@@ -10,7 +10,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <main className={`${jetbrainsMono.className} bg-black text-white min-h-screen`}>
+    <main className={`${jetbrainsMono.className} bg-gray-900 text-white min-h-screen`}>
       <Navbar />
       <Component {...pageProps} />
     </main >

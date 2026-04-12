@@ -5,24 +5,24 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 bg-gray-300 backdrop-blur border-b border-neutral-200">
+    <nav className="sticky top-0 z-50 bg-neutral-800 backdrop-blur border-b border-neutral-700">
       <div className="mx-auto max-w-6xl px-6 h-14 flex items-center justify-start">
         {/* Desktop Menu */}
-        <div className="hidden sm:flex items-center gap-6 text-sm text-neutral-600">
-          <Link href="/" className="hover:text-neutral-900">
+        <div className="hidden sm:flex items-center gap-6 text-sm text-neutral-400">
+          <Link href="/" className="hover:text-neutral-100 transition-colors">
             Home
           </Link>
-          <Link href="/reading" className="hover:text-neutral-900">
+          <Link href="/reading" className="hover:text-neutral-100 transition-colors">
             Reading
           </Link>
-          <Link href="/deep-dives" className="hover:text-neutral-900">
+          <Link href="/deep-dives" className="hover:text-neutral-100 transition-colors">
             Deep Dives
           </Link>
         </div>
 
         {/* Mobile Hamburger */}
         <button
-          className="sm:hidden text-neutral-600 focus:outline-none"
+          className="sm:hidden text-neutral-400 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
         >
           {/* Simple hamburger */}
@@ -44,11 +44,11 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden px-6 pb-4 flex flex-col gap-3 text-neutral-600">
-          <Link href="/reading" className="hover:text-neutral-900">
+        <div className="md:hidden px-6 pb-4 flex flex-col gap-3 text-neutral-400">
+          <Link href="/reading" className="hover:text-neutral-100 transition-colors">
             Reading
           </Link>
-          <Link href="/deep-dives" className="hover:text-neutral-900">
+          <Link href="/deep-dives" className="hover:text-neutral-100 transition-colors">
             Deep Dives
           </Link>
         </div>
