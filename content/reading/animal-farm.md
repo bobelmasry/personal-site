@@ -2,6 +2,7 @@
 title: "Animal Farm"
 author: "George Orwell"
 rating: 9
+dateRead: "3/20/2026"
 ---
 
 ## Summary 

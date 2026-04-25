@@ -2,6 +2,7 @@
 title: "The Lessons of History"
 author: "Will and Ariel Durant"
 rating: 4
+dateRead: "3/1/2026"
 ---
 
 ## Summary

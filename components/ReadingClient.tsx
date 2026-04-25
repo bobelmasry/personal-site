@@ -4,17 +4,6 @@ import { useMemo, useState } from "react"
 import Link from "next/link"
 import type { BookData } from "@/lib/reading"
 
-const BOOK_COLORS = [
-  "#2f5d50",
-  "#6b4f3f",
-  "#3f4e6b",
-  "#7b2d26",
-  "#4a4a4a",
-  "#8a7f4e",
-  "#5a3e36",
-  "#2e2e2e",
-]
-
 function BookCard({ book }: { book: BookData }) {
   const summaryPreview = (book.summary || []).slice(0, 2)
   const notesPreview = (book.notes || []).slice(0, 2)

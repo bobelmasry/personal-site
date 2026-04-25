@@ -2,6 +2,7 @@
 title: "Mother of God: An Extraordinary Journey into the Uncharted Tributaries of the Amazon Rainforest"
 author: "Paul Rosolie"
 rating: 8
+dateRead: "3/12/2026"
 ---
 
 ## Summary

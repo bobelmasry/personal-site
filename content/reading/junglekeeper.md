@@ -2,6 +2,7 @@
 title: "Junglekeeper: What it Takes to Change the World"
 author: "Paul Rosolie"
 rating: 7
+dateRead: "2/30/2026"
 ---
 
 ## Summary
